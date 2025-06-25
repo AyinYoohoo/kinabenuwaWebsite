@@ -822,8 +822,14 @@ header.header-sm{
     text-transform: uppercase;
 }
 /* Special centering for Camping and Hangout */
-.facts-item:nth-child(5), .facts-item:nth-child(6) {
-    align-self: center; /* Centers Camping and Hangout */
+.centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centered .facts-icon {
+    margin-bottom: 10px; /* Optional: Adds space between icon and text */
 }
 
 /* ### CONTACT PAGE ### */
