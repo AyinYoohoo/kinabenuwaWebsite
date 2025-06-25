@@ -816,6 +816,24 @@ header.header-sm{
 
 /* ### CONTACT PAGE ### */
 /* contact */
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-left {
+    width: 48%; /* Adjust width for form */
+}
+
+.contact-right {
+    width: 48%; /* Adjust width for contact details */
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
 .contact-form .form-control{
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #000;
