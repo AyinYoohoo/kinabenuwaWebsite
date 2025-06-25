@@ -791,11 +791,30 @@ header.header-sm{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/facts-img.jpg) center/cover no-repeat;
     min-height: 80vh;
 }
-#facts .title-wrap{
+#facts {
     color: #fff;
 }
-#facts .sm-title{
+
+#facts .title-wrap {
     color: #fff;
+}
+
+#facts .sm-title {
+    color: #fff;
+}
+
+#facts .facts-icon {
+    color: #fff;
+}
+
+#facts .facts-info strong {
+    color: #fff;
+}
+
+#facts .facts-info .text {
+    color: #fff;
+}
+
 }
 /* Layout for facts-row */
 .facts-row {
