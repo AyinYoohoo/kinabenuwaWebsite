@@ -803,10 +803,12 @@ header.header-sm{
     justify-content: center; /* Centers the items horizontally */
     gap: 20px; /* Adds space between items */
 }
-.facts-item{
+.facts-item {
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem;
+    max-width: 220px; /* Optional: keeps the items to a fixed width */
+    width: 100%;
 }
 .facts-icon{
     font-size: 3.2rem;
@@ -818,6 +820,10 @@ header.header-sm{
 }
 .facts-info .text{
     text-transform: uppercase;
+}
+/* Special centering for Camping and Hangout */
+.facts-item:nth-child(5), .facts-item:nth-child(6) {
+    align-self: center; /* Centers Camping and Hangout */
 }
 
 /* ### CONTACT PAGE ### */
