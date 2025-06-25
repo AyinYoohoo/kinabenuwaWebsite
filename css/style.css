@@ -797,40 +797,40 @@ header.header-sm{
 #facts .sm-title{
     color: #fff;
 }
+/* Layout for facts-row */
 .facts-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    gap: 20px; /* Add space between items */
+}
+
+/* Style for the wrapper containing Camping and Hangout */
+.center-wrapper {
+    grid-column: span 2; /* This spans both columns, placing Camping and Hangout below Exercise and Cycling */
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping if the screen is too narrow */
-    justify-content: center; /* Centers the items horizontally */
-    gap: 20px; /* Adds space between items */
+    justify-content: center;
+    gap: 20px; /* Space between Camping and Hangout */
 }
+
+/* Make sure icons are centered in their container */
 .facts-item {
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    max-width: 220px; /* Optional: keeps the items to a fixed width */
-    width: 100%;
-}
-.facts-icon{
-    font-size: 3.2rem;
-}
-.facts-info strong{
-    font-size: 2rem;
-    display: block;
-    margin: 1rem 0;
-}
-.facts-info .text{
-    text-transform: uppercase;
-}
-/* Special centering for Camping and Hangout */
-.centered {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-.centered .facts-icon {
-    margin-bottom: 10px; /* Optional: Adds space between icon and text */
+
+/* Make sure the content is responsive on smaller screens */
+@media (max-width: 768px) {
+    .facts-row {
+        grid-template-columns: 1fr; /* Stack the items on smaller screens */
+    }
+    
+    .center-wrapper {
+        grid-column: span 1; /* Allow stacking to one column */
+    }
 }
+
 
 /* ### CONTACT PAGE ### */
 /* contact */
