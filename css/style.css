@@ -797,6 +797,12 @@ header.header-sm{
 #facts .sm-title{
     color: #fff;
 }
+.facts-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if the screen is too narrow */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Adds space between items */
+}
 .facts-item{
     color: #fff;
     text-align: center;
