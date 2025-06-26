@@ -85,18 +85,23 @@
 .navbar-nav{
     margin-top: 5rem;
 }
-.nav-item{
-    margin: 1.6rem 0;
+
+/* Style for active page */
+.nav-item.active .nav-link {
+    color: #fff; /* Highlight color for active page */
+    background-color: #007bff; /* Background color for active page */
+    font-weight: bold; /* Bold text for emphasis */
 }
-.nav-link{
-    color: #fff;
-    font-size: 1.2rem;
-    -webkit-transition: var(--trans);
-    -o-transition: var(--trans);
-    transition: var(--trans);
+
+/* Hover effect for all links */
+.nav-link:hover {
+    color: #007bff; /* Change text color on hover */
+    text-decoration: underline; /* Add underline for hover effect */
 }
-.nav-link:hover{
-    opacity: 0.8;
+
+/* Optional: Make the navigation link look more interactive */
+.nav-link {
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 /* header */
