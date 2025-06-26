@@ -47,3 +47,28 @@ window.addEventListener('load', () => {
         }
     });
 });
+
+// Search functionality - Filter content based on search input
+const searchInput = document.getElementById('search-bar');
+const searchButton = document.getElementById('search-btn');
+
+searchButton.addEventListener('click', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const searchableElements = document.querySelectorAll('.searchable');
+
+    searchableElements.forEach(element => {
+        const text = element.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+            element.style.display = ''; // Show the element if it matches the search term
+        } else {
+            element.style.display = 'none'; // Hide the element if it doesn't match
+        }
+    });
+});
+
+// Optional: Search when the user presses 'Enter' in the search bar
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        searchButton.click();
+    }
+});
