@@ -21,37 +21,13 @@
     align-items: center;
     width: 100%;
 }
-.site-brand{
-    color: #fff;
-    font-size: 2.4rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    opacity: 0.95;
-}
-.site-brand span{
-    font-weight: 300;
-}
-#navbar-show-btn{
-    background: transparent;
-    color: #fff;
-    font-size: 2rem;
-    opacity: 0.9;
-    -webkit-transition: var(--trans);
-    -o-transition: var(--trans);
-    transition: var(--trans);
-    border: none;
-}
-#navbar-show-btn:hover{
-    opacity: 1;
-}
 
 /* Search bar container */
 .search-container {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Align the search bar to the right */
+    margin-right: 1rem; /* Space between the search bar and the logo */
 }
-
 /* Search input */
 #search-bar {
     padding: 0.5rem;
@@ -75,6 +51,52 @@
 
 #search-btn:hover {
     background-color: #1b9b8b;
+}
+
+.site-brand{
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    opacity: 0.95;
+}
+.site-brand span{
+    font-weight: 300;
+}
+/* Navbar links styling */
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 1.5rem; /* Space between nav items */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Navbar link hover effect */
+.nav-link:hover {
+    color: var(--green);
+}
+#navbar-show-btn{
+    background: transparent;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.9;
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
+    border: none;
+}
+#navbar-show-btn:hover{
+    opacity: 1;
 }
 
 /* Responsive design */
