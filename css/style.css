@@ -55,7 +55,7 @@
 /* Highlight the matched search term */
 .highlight {
     background-color: yellow;
-    color: #000;
+    color: black;
     font-weight: bold;
 }
 
