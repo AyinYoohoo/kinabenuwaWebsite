@@ -1,22 +1,22 @@
+// Navbar Scroll Effect
 let navbarDiv = document.querySelector('.navbar'); 
 window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        navbarDiv.classList.add('navbar-cng'); // Add the class to navbar when scrolled
+        navbarDiv.classList.add('navbar-cng');
     } else {
-        navbarDiv.classList.remove('navbar-cng'); // Remove the class when back at the top
+        navbarDiv.classList.remove('navbar-cng');
     }
 });
 
+// Navbar Collapse Behavior
 const navbarCollapseDiv = document.getElementById('navbar-collapse');
 const navbarShowBtn = document.getElementById('navbar-show-btn');
 const navbarCloseBtn = document.getElementById('navbar-close-btn');
 
-// Show navbar
 navbarShowBtn.addEventListener('click', () => {
     navbarCollapseDiv.classList.add('navbar-collapse-rmw');
 });
 
-// Hide sidebar
 navbarCloseBtn.addEventListener('click', () => {
     navbarCollapseDiv.classList.remove('navbar-collapse-rmw');
 });
@@ -41,7 +41,6 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        // If the link's href matches the current URL, add the active class
         if (link.href === window.location.href) {
             link.closest('.nav-item').classList.add('active');
         }
@@ -56,12 +55,22 @@ searchButton.addEventListener('click', () => {
     const searchTerm = searchInput.value.toLowerCase();
     const searchableElements = document.querySelectorAll('.searchable');
 
+    // If the search bar is empty, reset all elements to be visible
+    if (!searchTerm) {
+        searchableElements.forEach(element => {
+            element.style.display = '';
+            removeHighlights(element); // Remove highlights when reset
+        });
+        return;
+    }
+
     searchableElements.forEach(element => {
         const text = element.textContent.toLowerCase();
         if (text.includes(searchTerm)) {
-            element.style.display = ''; // Show the element if it matches the search term
+            element.style.display = ''; // Show element if it matches
+            highlightText(element, searchTerm); // Highlight matching text
         } else {
-            element.style.display = 'none'; // Hide the element if it doesn't match
+            element.style.display = 'none'; // Hide element if it doesn't match
         }
     });
 });
@@ -72,3 +81,18 @@ searchInput.addEventListener('keydown', (e) => {
         searchButton.click();
     }
 });
+
+// Function to highlight the search term within the element
+function highlightText(element, searchTerm) {
+    let innerHTML = element.innerHTML;
+    const regex = new RegExp(`(${searchTerm})`, 'gi'); // Regex to find matching terms
+    innerHTML = innerHTML.replace(regex, '<span class="highlight">$1</span>');
+    element.innerHTML = innerHTML;
+}
+
+// Function to remove highlights when resetting
+function removeHighlights(element) {
+    let innerHTML = element.innerHTML;
+    innerHTML = innerHTML.replace(/<span class="highlight">|<\/span>/g, ''); // Remove the span tags
+    element.innerHTML = innerHTML;
+}
