@@ -5,17 +5,21 @@
     --trans: all 0.3s ease-in-out;
 }
 .navbar{
+    display: flex;
+    justify-content: space-between; /* Ensures navbar items are spaced out */
+    align-items: center; /* Aligns items vertically in the center */
+    padding: 1rem;
+    background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: transparent;
-    padding: 1rem 0;
     z-index: 999;
 }
 .navbar .container{
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 .site-brand{
     color: #fff;
@@ -45,8 +49,10 @@
 .search-container {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Align the search bar to the right */
 }
 
+/* Search input */
 #search-bar {
     padding: 0.5rem;
     font-size: 1rem;
@@ -54,6 +60,7 @@
     border-radius: 5px;
     margin-right: 0.5rem;
     outline: none;
+    width: 200px;
 }
 
 /* Search button */
