@@ -99,10 +99,17 @@
     color: #000; /* Change to black when scrolled */
 }
 
+/* Highlight the active link */
+.nav-item.active .nav-link {
+    color: var(--green); /* Active link color */
+    font-weight: bold;  /* Bold text */
+    text-decoration: underline; /* Optional: Underline active link */
+}
+
 /* Hover effect for navbar links */
 .nav-link:hover {
-    color: #007bff; /* Add your hover color */
-    text-decoration: underline; /* Optional: Underline on hover */
+    color: var(--green); /* Change to green when hovered */
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Navbar background color change when scrolled */
@@ -114,14 +121,14 @@
 }
 
 .navbar-cng .site-brand span {
-    color: #1ec6b6; /* Adjust color if needed for the logo text */
+    color: var(--green); /* Adjust color if needed for the logo text */
 }
 
-/* Optional: Ensure active navbar links stay highlighted with black text */
+/* Optional: Ensure active navbar links stay highlighted with green when scrolled */
 .navbar-cng .nav-item.active .nav-link {
-    color: #000; /* Active link color when scrolled */
+    color: var(--green); /* Active link color when scrolled */
     font-weight: bold;  /* Bold active link */
-    text-decoration: underline; /* Optional: Underline active link */
+    text-decoration: underline; /* Underline active link */
 }
 
 /* header */
