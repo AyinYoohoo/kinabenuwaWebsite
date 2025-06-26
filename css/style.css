@@ -17,18 +17,13 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
-/* Hover effect for the site brand */
-.site-brand:hover {
-    color: #007bff; /* Change color when hovered */
-    text-decoration: underline; /* Add underline on hover */
-    font-weight: bold; /* Make the text bold when hovered */
+.site-brand{
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    opacity: 0.95;
 }
-
-/* Optional: Add a transition effect for smooth hover */
-.site-brand {
-    transition: color 0.3s ease, font-weight 0.3s ease;
-}
-
 .site-brand span{
     font-weight: 300;
 }
@@ -90,22 +85,18 @@
 .navbar-nav{
     margin-top: 5rem;
 }
-/* Style for active page */
-.nav-item.active .nav-link {
-    color: #fff; /* Highlight color for active page */
-    background-color: #007bff; /* Background color for active page */
-    font-weight: bold; /* Bold text for emphasis */
+.nav-item{
+    margin: 1.6rem 0;
 }
-
-/* Hover effect for all links */
-.nav-link:hover {
-    color: #007bff; /* Change text color on hover */
-    text-decoration: underline; /* Add underline for hover effect */
+.nav-link{
+    color: #fff;
+    font-size: 1.2rem;
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
 }
-
-/* Optional: Make the navigation link look more interactive */
-.nav-link {
-    transition: all 0.3s ease; /* Smooth transition on hover */
+.nav-link:hover{
+    opacity: 0.8;
 }
 
 /* header */
