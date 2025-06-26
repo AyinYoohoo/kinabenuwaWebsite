@@ -114,17 +114,24 @@
 
 /* Navbar background color change when scrolled */
 .navbar-cng {
-    background-color: #fff; /* Change background to white when scrolled */
+    background-color: #fff; /* Change navbar background to white when scrolled */
 }
+
+/* Navbar link color change when scrolled (navbar-cng class) */
+.navbar-cng .nav-link {
+    color: #000; /* Change navbar link color to black when scrolled */
+}
+
+/* Change logo color when navbar is scrolled */
 .navbar-cng .site-brand {
     color: #000; /* Change logo color to black when scrolled */
 }
 
 .navbar-cng .site-brand span {
-    color: var(--green); /* Adjust color if needed for the logo text */
+    color: var(--green); /* Adjust color of the span if needed */
 }
 
-/* Optional: Ensure active navbar links stay highlighted with green when scrolled */
+/* Active navbar links remain highlighted with green */
 .navbar-cng .nav-item.active .nav-link {
     color: var(--green); /* Active link color when scrolled */
     font-weight: bold;  /* Bold active link */
