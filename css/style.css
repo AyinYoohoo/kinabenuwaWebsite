@@ -86,17 +86,17 @@
     margin-top: 5rem;
 }
 
-/* Style for active page */
+/* Style for active navigation item */
 .nav-item.active .nav-link {
-    color: #fff; /* Highlight color for active page */
-    background-color: #007bff; /* Background color for active page */
-    font-weight: bold; /* Bold text for emphasis */
+    color: var(--green); /* Change the link color when active */
+    font-weight: bold; /* Make the active link bold */
+    text-decoration: underline; /* Underline the active link */
 }
 
-/* Hover effect for all links */
+/* Style for hover effect */
 .nav-link:hover {
-    color: #007bff; /* Change text color on hover */
-    text-decoration: underline; /* Add underline for hover effect */
+    color: var(--green); /* Change color when hovering */
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Optional: Make the navigation link look more interactive */
