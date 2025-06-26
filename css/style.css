@@ -1016,14 +1016,16 @@ header.header-sm{
     display: block;
     margin: auto;
 }
-.contact-icon{
-    background-color: var(--green);
-    color: #fff;
-    width: 60px;
-    height: 60px;
+.contact-icon {
+    font-size: 2rem; /* Default size for larger screens */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    margin: 1rem auto;
-    font-size: 2rem;
+    background-color: var(--green);
+    color: white;
 }
 .contact-item{
     text-align: center;
@@ -1036,3 +1038,19 @@ header.header-sm{
     display: block;
     margin-bottom: 1rem;
 }
+@media (max-width: 768px) {
+    .contact-icon {
+        font-size: 1.5rem; /* Smaller icon size for smaller screens */
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-icon {
+        font-size: 1rem; /* Even smaller icon size for very small screens */
+        width: 30px;
+        height: 30px;
+    }
+}
+
