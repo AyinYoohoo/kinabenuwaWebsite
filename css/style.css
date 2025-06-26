@@ -86,22 +86,42 @@
     margin-top: 5rem;
 }
 
-/* Style for active navigation item */
-.nav-item.active .nav-link {
-    color: var(--green); /* Change the link color when active */
-    font-weight: bold; /* Make the active link bold */
-    text-decoration: underline; /* Underline the active link */
-}
-
-/* Style for hover effect */
-.nav-link:hover {
-    color: var(--green); /* Change color when hovering */
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Optional: Make the navigation link look more interactive */
+/* Default Navbar Link Color (White) */
 .nav-link {
-    transition: all 0.3s ease; /* Smooth transition on hover */
+    color: #fff; /* White color by default */
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
+}
+
+/* Navbar link color when scrolled (Black) */
+.navbar-cng .nav-link {
+    color: #000; /* Change to black when scrolled */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+    color: #007bff; /* Add your hover color */
+    text-decoration: underline; /* Optional: Underline on hover */
+}
+
+/* Navbar background color change when scrolled */
+.navbar-cng {
+    background-color: #fff; /* Change background to white when scrolled */
+}
+.navbar-cng .site-brand {
+    color: #000; /* Change logo color to black when scrolled */
+}
+
+.navbar-cng .site-brand span {
+    color: #1ec6b6; /* Adjust color if needed for the logo text */
+}
+
+/* Optional: Ensure active navbar links stay highlighted with black text */
+.navbar-cng .nav-item.active .nav-link {
+    color: #000; /* Active link color when scrolled */
+    font-weight: bold;  /* Bold active link */
+    text-decoration: underline; /* Optional: Underline active link */
 }
 
 /* header */
