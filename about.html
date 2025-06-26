@@ -30,11 +30,14 @@
                 <i class="fas fa-bars"></i>
             </button>
             
-            <!-- Search Bar Container -->
+            <!-- Search Bar -->
             <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search...">
+                <input type="text" id="search-bar" placeholder="Search..." oninput="performSearch()">
                 <button id="search-btn"><i class="fas fa-search"></i></button>
             </div>
+            
+            <!-- Results container to display found words -->
+            <div id="results-container"></div>
             
             <!-- Navbar Links (on desktop) -->
             <div id="navbar-collapse">
