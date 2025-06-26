@@ -52,6 +52,29 @@
 #search-btn:hover {
     background-color: #1b9b8b;
 }
+/* Highlight the matched search term */
+.highlight {
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Results container styling */
+#results-container {
+    margin-top: 1rem;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#results-container div {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
 
 .site-brand{
     color: #fff;
